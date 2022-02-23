@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title dir="ltr">سیستم طراحی جدول زمان بندی کلاس ها | راهنما</title>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/css/font.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+    <link href="static/css/help.css" rel="stylesheet" />
+    <link href="../static/css/font.css" rel="stylesheet" />
+
+<style>
+    @font-face {
+    font-family: 'BTitrBold';
+    src:url("{% static 'css/fonts/BTitrBold'%}") format('eot');
+    src:url("{% static 'css/fonts/BTitrBold.woff'%}") format('woff');
+    src:url("{% static 'css/fonts/BTitrBold.ttf'%}") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'BKoodakBold';
+    src:url("{% static 'css/fonts/BKoodakBold.eot'%}") format('eot');
+    src:url("{% static 'css/fonts/BKoodakBold.woff'%}") format('woff');
+    src:url("{% static 'css/fonts/BKoodakBold.ttf'%}") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'BNazanin';
+    src:url("{% static 'css/fonts/BNazanin.eot'%}") format('eot');
+    src:url("{% static 'css/fonts/BNazanin.woff'%}") format('woff');
+    src:url("{% static 'css/fonts/BNazanin.ttf'%}") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+        body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+    font-family: 'BBardiya', sans-serif;
+    overflow-x: hidden;
+    text-align: right;
+}
+main {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+    font-family: 'BBardiya', sans-serif;
+    overflow-x: hidden;
+    text-align: right;
+    direction: rtl;
+}
+
+nav {
+    font-family: sans-serif;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.container {
+    max-width: 960px;
+}
+
+.pricing-header {
+    max-width: 700px;
+}
+
+.card-deck .card {
+    min-width: 220px;
+}
+
+.themed-container {
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: rgba(0, 123, 255, .15);
+    border: 1px solid rgba(0, 123, 255, .2);
+}
+.font{
+    font-family: 'BNazanin';
+}
+.sidebar{
+        font-family: 'BNazanin'
+    }
+    .sidebar{
+        font-family: 'BNazanin'
+    }
+</style>
+</head>
+<body>
+    <header>
+        <!--Navigation Bar-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="float: right;">
+            <a class="navbar-brand" href="" style="font-family: BTitrBold;"><b>سیستم طراحی جدول زمان بندی کلاس ها</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link sidebar" href="{% url 'import_data' %}">وارد کردن اطلاعات</a>
+                </li>
+                <li class="nav-item sidebar">
+                    <a class="nav-link" href="{% url 'about' %}">درباره ما</a>
+                </li>
+                <li class="nav-item sidebar">
+                    <a class="nav-link" href="{% url 'help' %}">راهنما</a>
+                </li>
+                <li class="nav-item active sidebar">
+                    <a class="nav-link" href="{% url 'contact' %}">ارتباط با ما</a>
+                </li>
+                <li class="nav-item sidebar">
+                  <a class="nav-link" href="{% url 'index' %}">خانه</a>
+                </li>                
+                </ul>
+            </div>
+        </nav>
+    </header>
+            <main role="main" >
+
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-4" style="font-family: 'BTitrBold';">چگونه از سایت استفاده کنیم</h1>
+            <p class="lead" style="font-family: 'BKoodakBold';">لطفا برای استفاده از سایت مراحل زیر را طی کنید</p>
+        </div>
+        <div class="font">
+            <div class="container themed-container">
+                نام اساتید را به فرمت زیر در فابل اکسل وارد کنید.<br>
+                دقت کنید نام ستون همانند عکس باشد.<br>
+                دقت کنید شماره شناسه(id) تکراری نباشد.<br>
+                اعداد را با کیبورد انگلیسی وارد کنید.<br>
+                <img src="{% static 'img/instructure.png' %}" style="width: 50%; height: auto;"><br>
+                <a href="{% static 'files/Instructor.xlsx' %}">نمونه فایل اکسل</a>
+            </div>
+            <div class="container themed-container">
+                کلاس ها را به فرمت زیر در فابل اکسل وارد کنید.<br>
+                دقت کنید نام ستون همانند عکس باشد.<br>
+                دقت کنید شماره شناسه(id) تکراری نباشد.<br>
+                اعداد را با کیبورد انگلیسی وارد کنید.<br>
+                <img src="{% static 'img/Room.png' %}" style="width: 50%; height: auto;"><br>
+                <a href="{% static 'files/Room.xlsx' %}">نمونه فایل اکسل</a>
+            </div>
+            <div class="container themed-container">
+                زمان بندی را به فرمت زیر در فابل اکسل وارد کنید.<br>
+                دقت کنید نام ستون همانند عکس باشد.<br>
+                دقت کنید شماره شناسه(id) تکراری نباشد.<br>
+                دقت کنید واحد های زمانی با هم برابر باشند.<br>
+                اعداد را با کیبورد انگلیسی وارد کنید.<br>
+                <img src="{% static 'img/Meet.png' %}" style="width: 50%; height: auto;"><br>
+                <a href="{% static 'files/MeetingTime.xlsx' %}">نمونه فایل اکسل</a>
+            </div>
+            <div class="container themed-container">
+                کلاس ها را به فرمت زیر در فابل اکسل وارد کنید.<br>
+                دقت کنید نام ستون همانند عکس باشد.<br>
+                دقت کنید شماره شناسه(id) تکراری نباشد.<br>
+                در ستون اخر شناسه استاد هایی که میتوانند آن درس را تدریس کنند وارد کنید .
+                اگر چندین استاد درس را تدریس میکنند با , بین شناسه هایشان فاصله بگذارید.<br>
+                اعداد را با کیبورد انگلیسی وارد کنید.<br>
+                دقت کنید تعداد دروس نمیتواند کمتر از تعداد واحدهای زمانی باشد.<br>
+                <img src="{% static 'img/Course.png' %}" style="width: 50%; height: auto;"><br>
+                <a href="{% static 'files/Course.xlsx' %}">نمونه فایل اکسل</a>
+            </div>
+            <div class="container themed-container">
+                دانشکده ها را به فرمت زیر در فابل اکسل وارد کنید.<br>
+                دقت کنید نام ستون همانند عکس باشد.<br>
+                دقت کنید شماره شناسه(id) تکراری نباشد.<br>
+                در ستون اخر شناسه درس هایی که برای آن دانشکده است را وارد کنید .
+                اگر چندین درس برای دانشکده بود با , بین شناسه هایشان فاصله بگذارید.<br>
+                اعداد را با کیبورد انگلیسی وارد کنید.<br>
+                <img src="{% static 'img/Departments.png' %}" style="width: 50%; height: auto;"><br>
+                <a href="{% static 'files/Department.xlsx' %}">نمونه فایل اکسل</a>
+            </div>
+            <div class="container themed-container">
+                گروه های درسی دانشکده ها را به فرمت زیر در فابل اکسل وارد کنید.<br>
+                دقت کنید نام ستون همانند عکس باشد.<br>
+                دقت کنید شماره شناسه(id) تکراری نباشد.<br>
+                دقت کنید در ستون دانشکده (department)  شناسه درست باشد.<br>
+                اعداد را با کیبورد انگلیسی وارد کنید.<br>
+                <img src="{% static 'img/Section.png' %}" style="width: 50%; height: auto;"><br>
+                <a href="{% static 'files/Section.xlsx' %}">نمونه فایل اکسل</a>
+            </div>
+            <div class="container themed-container"> وارد صفحه <a href="{% url 'import_data' %}"> وارد کردن اطلاعات</a> شوید.<br>
+                سپس به ترتیب روی بخش های مختلف کلیک کنید.<br>
+                <img src="{% static 'img/import_data1.png' %}" style="width: 50%; height: auto;"><br>
+                دکمه بارگذاری رو بزنید.<br>
+                <img src="{% static 'img/import_data2.png' %}" style="width: 50%; height: auto;"><br>
+                سپس فایل مربوط به آن بخش را در محل بارگذاری قرار دهید و فرمت فایل را مشخص کنید.<br>
+                <img src="{% static 'img/import_data3.png' %}" style="width: 50%; height: auto;"><br>
+                بعد از نمایش اطلاعات، اگر صحیح بودند تایید کنید.<br>
+                به صفحه ورود اطلاعات برگردید و روی دکلمه ساخت جدول زمانی کلیک کنید. ممکن است کمی طول بکشید.
+
+            </div>
+
+        </div>
+    </form>
+</body>
+</html>

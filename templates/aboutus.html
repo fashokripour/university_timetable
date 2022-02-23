@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>سیستم طراحی جدول زمان بندی کلاس ها | درباره ما</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/aboutus.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/carousel/">
+
+<style>
+  @font-face {
+    font-family: 'BTitrBold';
+    src:url("{% static 'css/fonts/BTitrBold.'%}") format('eot');
+    src:url("{% static 'css/fonts/BTitrBold.woff'%}") format('woff');
+    src:url("{% static 'css/fonts/BTitrBold.ttf'%}") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'BKoodakBold';
+    src:url("{% static 'css/fonts/BKoodakBold.eot'%}") format('eot');
+    src:url("{% static 'css/fonts/BKoodakBold.woff'%}") format('woff');
+    src:url("{% static 'css/fonts/BKoodakBold.ttf'%}") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'BNazanin';
+    src:url("{% static 'css/fonts/BNazanin.eot'%}") format('eot');
+    src:url("{% static 'css/fonts/BNazanin.woff'%}") format('woff');
+    src:url("{% static 'css/fonts/BNazanin.ttf'%}") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+  body {
+    padding-top: 3.5rem;
+    text-align :right
+  }
+
+  nav {
+    font-family: sans-serif;
+  }
+
+  .navbar-brand {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .media-body{
+    margin-left: 10px;
+  }
+  .font{
+    font-family: 'BNazanin';
+    font-size: 20px;
+  }
+  .sub{
+    font-size: 30;
+    font-family: 'BKoodakBold';
+  }
+  .subt{
+    font-size: 40;
+    font-family: 'BNazanin';
+  }
+  .sidebar{
+        font-family: 'BNazanin'
+    }
+</style>
+</head>
+<body>
+    <header>
+        <!--Navigation Bar-->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="float: right;">
+            <a class="navbar-brand" href="index.html" style="font-family: BTitrBold;"><b>سیستم طراحی جدول زمان بندی کلاس ها</b></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link sidebar" href="{% url 'import_data' %}">وارد کردن اطلاعات</a>
+                </li>
+                <li class="nav-item sidebar">
+                    <a class="nav-link" href="{% url 'about' %}">درباره ما</a>
+                </li>
+                <li class="nav-item sidebar">
+                    <a class="nav-link" href="{% url 'help' %}">راهنما</a>
+                </li>
+                <li class="nav-item active sidebar">
+                    <a class="nav-link" href="{% url 'contact' %}">ارتباط با ما</a>
+                </li>
+                <li class="nav-item sidebar">
+                  <a class="nav-link" href="{% url 'index' %}">خانه</a>
+                </li>                
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+     <main role="main">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <img src="{% static 'img/Arm.png' %}" style="width: 40%; height: auto;">
+        </div>
+        <div class="col-6">
+          <h1 class="display-4" style="font-family:'BTitrBold';">درباره ما</h1>
+          <div class = 'font'>
+            نام : فاطمه <br>
+            نام خانوادگی : شکریپور<br>
+            پایه : هشتم<br>
+            تاریخ تولد : 3/2/1387<br>
+            نام مدرسه : فرزانگان1 دوره اول<br>
+            شماره تلفن همراه : 09904754384
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class = 'sub'>چگونه کار میکند</h2>
+        <p class = 'subt'>اطلاعات مرتبط با دروس،اساتید،کلاس ها، دپارتمان ها را میگیرد سپس با استفاده از الگوریتم ژنتیک جدول زمان بندی دانشگاه را تحویل میدهد</p>
+        <p><a class="btn btn-secondary sidebar" href="{% url 'import_data' %}" role="button">ساخت جدول زمان بندی </a></p>
+      </div>
+      <div class="col-md-6">
+        <h2 class = 'sub'>قوانین</h2>
+        <p class = 'subt'>اگر سوالی درباره قوانین این سایت دارید لطفا روی دکمه کلید کنید و قوانین را مطالعه کنید</p>
+        <p><a class="btn btn-secondary sidebar" href="{% url 'terms' %}" role="button">قوانین </a></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- <footer class="container">
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="../assets/dist/js/bootstrap.bundle.js"></script>
+
+    </form> -->
+</body>
+</html>

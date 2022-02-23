@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'BTitrBold';
+    src:url("{% static 'css/fonts/BTitrBold'%}") format('eot');
+    src:url("{% static 'css/fonts/BTitrBold.woff'%}") format('woff');
+    src:url("{% static 'css/fonts/BTitrBold.ttf'%}") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'BKoodakBold';
+    src:url("{% static 'css/fonts/BKoodakBold.eot'%}") format('eot');
+    src:url("{% static 'css/fonts/BKoodakBold.woff'%}") format('woff');
+    src:url("{% static 'css/fonts/BKoodakBold.ttf'%}") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'BNazanin';
+    src:url("{% static 'css/fonts/BNazanin.eot'%}") format('eot');
+    src:url("{% static 'css/fonts/BNazanin.woff'%}") format('woff');
+    src:url("{% static 'css/fonts/BNazanin.ttf'%}") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
